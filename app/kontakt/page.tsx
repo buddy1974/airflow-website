@@ -3,12 +3,7 @@
 import { useState } from 'react'
 
 export default function KontaktPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    telefon: '',
-    nachricht: '',
-  })
+  const [formData, setFormData] = useState({ name: '', email: '', telefon: '', nachricht: '' })
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -37,9 +32,17 @@ export default function KontaktPage() {
       <section className="bg-gradient-to-br from-teal-500 to-teal-700 text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Kontakt</h1>
-          <p className="text-xl opacity-90">
-            Wir sind für Sie da — kostenlos, unverbindlich und persönlich.
-          </p>
+          <p className="text-xl opacity-90 font-light">Wir helfen schnell &amp; unkompliziert!</p>
+        </div>
+      </section>
+
+      {/* 24h banner */}
+      <section className="bg-teal py-4 px-4">
+        <div className="max-w-4xl mx-auto text-center text-white font-semibold">
+          📞 Über unser Notruftelefon sind wir 24 Stunden am Tag erreichbar —{' '}
+          <a href="tel:021516599998" className="underline hover:no-underline">
+            02151 / 65 99 998
+          </a>
         </div>
       </section>
 
@@ -88,7 +91,7 @@ export default function KontaktPage() {
                     value={formData.telefon}
                     onChange={(e) => setFormData({ ...formData, telefon: e.target.value })}
                     className="w-full border border-gray-300 rounded-md px-4 py-2.5 text-charcoal focus:outline-none focus:ring-2 focus:ring-teal focus:border-teal"
-                    placeholder="0211 123456"
+                    placeholder="02151 65 99 998"
                   />
                 </div>
                 <div>
@@ -107,7 +110,7 @@ export default function KontaktPage() {
 
                 {status === 'error' && (
                   <p className="text-red-500 text-sm">
-                    Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder rufen Sie uns an.
+                    Fehler beim Senden. Bitte versuchen Sie es erneut oder rufen Sie uns direkt an.
                   </p>
                 )}
 
@@ -122,62 +125,83 @@ export default function KontaktPage() {
             )}
           </div>
 
-          {/* Info */}
+          {/* Contact info */}
           <div>
             <h2 className="text-2xl font-bold text-charcoal mb-6">Unsere Kontaktdaten</h2>
-            <div className="bg-gray-50 rounded-xl p-6 space-y-5">
+            <div className="bg-gray-50 rounded-xl p-6 space-y-5 mb-4">
               <div className="flex gap-3">
-                <span className="text-2xl">📍</span>
+                <span className="text-2xl flex-shrink-0">🏢</span>
                 <div>
-                  <div className="font-semibold text-charcoal">Adresse</div>
-                  <div className="text-charcoal-light">Stephanstraße 7<br />47799 Krefeld</div>
+                  <div className="font-semibold text-charcoal">Hauptsitz</div>
+                  <div className="text-charcoal-light text-sm">
+                    Borgschenweg 8-12<br />47239 Duisburg
+                  </div>
                 </div>
               </div>
               <div className="flex gap-3">
-                <span className="text-2xl">📞</span>
+                <span className="text-2xl flex-shrink-0">📍</span>
+                <div>
+                  <div className="font-semibold text-charcoal">Standort Krefeld</div>
+                  <div className="text-charcoal-light text-sm">
+                    Stephanstraße 7<br />47799 Krefeld
+                  </div>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-2xl flex-shrink-0">📞</span>
                 <div>
                   <div className="font-semibold text-charcoal">Telefon</div>
-                  <a href="tel:021516599998" className="text-teal hover:underline">02151 / 65 99 998</a>
+                  <a href="tel:021516599998" className="text-teal hover:underline text-sm">
+                    02151 / 65 99 998
+                  </a>
                 </div>
               </div>
               <div className="flex gap-3">
-                <span className="text-2xl">📱</span>
+                <span className="text-2xl flex-shrink-0">📠</span>
+                <div>
+                  <div className="font-semibold text-charcoal">Telefax</div>
+                  <div className="text-charcoal-light text-sm">02151 / 36 94 214</div>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <span className="text-2xl flex-shrink-0">📱</span>
                 <div>
                   <div className="font-semibold text-charcoal">Mobil</div>
-                  <a href="tel:015174227338" className="text-teal hover:underline">0151 / 74 227 338</a>
+                  <a href="tel:015174227338" className="text-teal hover:underline text-sm">
+                    0151 / 74 227 338
+                  </a>
                 </div>
               </div>
               <div className="flex gap-3">
-                <span className="text-2xl">✉️</span>
+                <span className="text-2xl flex-shrink-0">✉️</span>
                 <div>
                   <div className="font-semibold text-charcoal">E-Mail</div>
-                  <a href="mailto:air.flow@gmx.de" className="text-teal hover:underline">air.flow@gmx.de</a>
+                  <a href="mailto:kontakt@fachpflegedienst-airflow.de" className="text-teal hover:underline text-sm break-all">
+                    kontakt@fachpflegedienst-airflow.de
+                  </a>
                 </div>
               </div>
               <div className="flex gap-3">
-                <span className="text-2xl">💬</span>
+                <span className="text-2xl flex-shrink-0">💬</span>
                 <div>
                   <div className="font-semibold text-charcoal">WhatsApp</div>
                   <a
                     href="https://wa.me/4915174227338"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-green-600 hover:underline"
+                    className="text-green-600 hover:underline text-sm"
                   >
                     Jetzt auf WhatsApp schreiben
                   </a>
                 </div>
               </div>
-              <div className="flex gap-3">
-                <span className="text-2xl">👤</span>
-                <div>
-                  <div className="font-semibold text-charcoal">Ansprechpartnerin</div>
-                  <div className="text-charcoal-light">R. Koroma, Pflegedienstleiterin</div>
-                </div>
-              </div>
             </div>
-            <div className="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-4 text-amber-800 text-sm">
-              <strong>Für dringende Anfragen:</strong> Erreichen Sie uns auch direkt telefonisch unter <a href="tel:021516599998" className="font-semibold hover:underline">02151 / 65 99 998</a> — rund um die Uhr.
+
+            <div className="bg-teal rounded-xl p-4 text-white text-sm font-medium text-center">
+              📞 Notruftelefon — 24 Stunden täglich erreichbar:<br />
+              <a href="tel:021516599998" className="text-lg font-bold hover:underline">
+                02151 / 65 99 998
+              </a>
             </div>
           </div>
         </div>

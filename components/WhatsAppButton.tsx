@@ -5,6 +5,7 @@ export default function WhatsAppButton() {
         href="https://wa.me/4915174227338"
         target="_blank"
         rel="noopener noreferrer"
+        title="Jetzt auf WhatsApp schreiben"
         className="flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors"
         aria-label="Auf WhatsApp schreiben"
       >

@@ -1,84 +1,165 @@
 import Link from 'next/link'
 
-const services = [
-  {
-    icon: '🫁',
-    title: 'Beatmungspflege',
-    desc: 'Wir übernehmen die vollständige Versorgung von beatmungspflichtigen Patienten zuhause. Unser Team aus examinierten Pflegefachkräften ist rund um die Uhr im Einsatz, überwacht Beatmungsgeräte und reagiert sofort bei Veränderungen. Die Pflege erfolgt nach individuell erstelltem Pflegeplan in enger Abstimmung mit dem behandelnden Arzt.',
-    href: '/beatmungspflege',
-  },
-  {
-    icon: '🔬',
-    title: 'Tracheostomaversorgung',
-    desc: 'Die Pflege des Tracheostomas erfordert höchste Sorgfalt und Fachkenntnisse. Unsere Pflegekräfte führen Kanülenwechsel, Wundreinigung und Wundversorgung nach ärztlicher Anordnung durch. Wir schulen auf Wunsch auch Angehörige in Grundkenntnissen der Tracheostomapflege.',
-    href: '/leistungen',
-  },
-  {
-    icon: '🏠',
-    title: '1:1 Intensivpflege zuhause',
-    desc: 'Eine Pflegefachkraft begleitet Ihren Angehörigen exklusiv rund um die Uhr. Diese Form der Intensivbetreuung stellt sicher, dass jede Veränderung im Gesundheitszustand sofort erkannt und behandelt wird. Das Verbleiben in der gewohnten Umgebung steigert nachweislich die Lebensqualität.',
-    href: '/leistungen',
-  },
-  {
-    icon: '💊',
-    title: 'Medikamentengabe nach ärztl. AO',
-    desc: 'Die sachgerechte Verabreichung von Medikamenten — oral, inhalativ oder parenteral — erfolgt ausschließlich nach ärztlicher Anordnung und wird lückenlos dokumentiert. Unsere Pflegekräfte überwachen Wirkung und Nebenwirkungen und informieren den Arzt bei Auffälligkeiten umgehend.',
-    href: '/leistungen',
-  },
-  {
-    icon: '🛁',
-    title: 'Grundpflege & Körperpflege',
-    desc: 'Tägliche Körperpflege, Waschen, Lagern und Prophylaxen gehören zum festen Bestandteil unserer Pflegeleistung. Wir achten dabei stets auf die Würde und die persönlichen Gewohnheiten unserer Patienten. Dekubitus- und Kontrakturprophylaxe werden konsequent umgesetzt.',
-    href: '/leistungen',
-  },
-  {
-    icon: '🧹',
-    title: 'Hauswirtschaftliche Versorgung',
-    desc: 'Ergänzend zur Pflege übernehmen wir auf Wunsch hauswirtschaftliche Aufgaben wie Einkaufen, Kochen, Wäschepflege und leichte Haushaltsarbeiten. So können Patienten vollständig in ihrer gewohnten häuslichen Umgebung verbleiben, ohne auf Unterstützung verzichten zu müssen.',
-    href: '/leistungen',
-  },
-]
-
 export default function LeistungenPage() {
   return (
     <>
       {/* Hero */}
       <section className="bg-gradient-to-br from-teal-500 to-teal-700 text-white py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Unsere Pflegeleistungen</h1>
-          <p className="text-xl opacity-90">
-            Hochspezialisierte ambulante Pflege für beatmungspflichtige Menschen — zuhause, würdevoll und sicher.
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-wide">
+            BEATMUNGSPFLEGE UND INTENSIVPFLEGE
+          </h1>
+          <p className="text-xl opacity-90 font-light">Wir helfen schnell &amp; unkompliziert!</p>
+        </div>
+      </section>
+
+      {/* Intro */}
+      <section className="bg-teal-50 border-b border-teal-100 py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-charcoal mb-4">Beratung und Organisation</h2>
+          <p className="text-charcoal-light leading-relaxed text-lg">
+            Wir übernehmen die Organisation und Begleitung von der Klinik bis nach Hause. Die Unterstützung bei der Beschaffung von medizinischen Geräten und die Begleitung zu außerhäuslichen Terminen ist gewährleistet. Sie können Ihre Sorgen &amp; Ängste bei uns thematisieren – gemeinsam finden wir Lösungen.
           </p>
         </div>
       </section>
 
-      {/* Services grid */}
+      {/* Service sections */}
       <section className="bg-white py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className="border border-gray-200 rounded-xl p-6 hover:border-teal hover:shadow-md transition-all"
-              >
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold text-charcoal mb-3">{service.title}</h3>
-                <p className="text-charcoal-light text-sm leading-relaxed mb-4">{service.desc}</p>
-                <Link href={service.href} className="text-teal font-medium text-sm hover:underline">
-                  Mehr erfahren →
-                </Link>
-              </div>
-            ))}
+        <div className="max-w-4xl mx-auto space-y-16">
+
+          {/* Intensiv- und Beatmungspflege */}
+          <div className="flex gap-6">
+            <div className="flex-shrink-0 w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center text-3xl">🫁</div>
+            <div>
+              <h2 className="text-2xl font-bold text-charcoal mb-4">Intensiv- und Beatmungspflege</h2>
+              <p className="text-charcoal-light leading-relaxed">
+                Wir sind Spezialisten für Intensiv- und Beatmungspflege! Wir beherrschen sämtliche medizinische und pflegerische Leistungen zur Beatmung: Heimbeatmung, Tracheostoma-Versorgung, Sauerstoffgabe, Pneumonie-Prävention und Sekretmanagement nach ärztlicher Anordnung. Wir übernehmen die 24-Stunden-Überwachung der lebenswichtigen Funktionen.
+              </p>
+              <ul className="mt-4 space-y-2">
+                {[
+                  'Heimbeatmung (invasiv und nicht-invasiv)',
+                  'Tracheostoma-Versorgung und Kanülenwechsel',
+                  'Sauerstoffgabe und -überwachung',
+                  'Pneumonie-Prävention',
+                  'Sekretmanagement und Absaugung',
+                  '24-Stunden-Monitoring der Vitalfunktionen',
+                  'Notfallmanagement nach klaren Protokollen',
+                ].map((item) => (
+                  <li key={item} className="flex gap-2 text-charcoal-light text-sm">
+                    <span className="text-teal font-bold flex-shrink-0">✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
+
+          <hr className="border-gray-100" />
+
+          {/* Behandlungspflege SGB V */}
+          <div className="flex gap-6">
+            <div className="flex-shrink-0 w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center text-3xl">💉</div>
+            <div>
+              <h2 className="text-2xl font-bold text-charcoal mb-4">Behandlungspflege (SGB V)</h2>
+              <p className="text-charcoal-light leading-relaxed">
+                Wir übernehmen die komplette Behandlungspflege nach SGB V für Sie! Injektionen, Verbandspflege, Kompressionsstrümpfe an- &amp; ausziehen, Augentropfengabe, Kathetisierung &amp; Katheterpflege, Stomabehandlung, PEG-Versorgung, Einläufe, Klistiere, Blutdruckmessung, Blutzuckerbestimmung, Medikamentengabe &amp; Kontrolle und Wundversorgung.
+              </p>
+              <ul className="mt-4 space-y-2">
+                {[
+                  'Injektionen (s.c., i.m.)',
+                  'Verbandspflege und Wundversorgung',
+                  'Kompressionsstrümpfe an- & ausziehen',
+                  'Augentropfengabe',
+                  'Kathetisierung & Katheterpflege',
+                  'Stomabehandlung',
+                  'PEG-Versorgung und Sondenernährung',
+                  'Einläufe und Klistiere',
+                  'Blutdruckmessung und Blutzuckerbestimmung',
+                  'Medikamentengabe & Kontrolle',
+                ].map((item) => (
+                  <li key={item} className="flex gap-2 text-charcoal-light text-sm">
+                    <span className="text-teal font-bold flex-shrink-0">✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <hr className="border-gray-100" />
+
+          {/* Grundpflege SGB XI */}
+          <div className="flex gap-6">
+            <div className="flex-shrink-0 w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center text-3xl">🏠</div>
+            <div>
+              <h2 className="text-2xl font-bold text-charcoal mb-4">Ambulante Pflege / Grundpflege (SGB XI)</h2>
+              <p className="text-charcoal-light leading-relaxed">
+                Wir übernehmen die Ambulante Pflege/Grundpflege nach SGB XI für Sie! Körperpflege, Waschen, Duschen, Baden, Ankleiden, Ernährung und Mobilisation — alles mit äußerstem Respekt und Einfühlungsvermögen.
+              </p>
+              <ul className="mt-4 space-y-2">
+                {[
+                  'Körperpflege (Waschen, Duschen, Baden)',
+                  'Ankleiden und Auskleiden',
+                  'Mundpflege und Zahnpflege',
+                  'Ernährungsunterstützung',
+                  'Mobilisation und Lagerung',
+                  'Begleitung zu Arzt- und Therapieterminen',
+                  'Aktivierende Pflege zur Erhaltung der Selbstständigkeit',
+                ].map((item) => (
+                  <li key={item} className="flex gap-2 text-charcoal-light text-sm">
+                    <span className="text-teal font-bold flex-shrink-0">✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <hr className="border-gray-100" />
+
+          {/* Hauswirtschaft */}
+          <div className="flex gap-6">
+            <div className="flex-shrink-0 w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center text-3xl">🧹</div>
+            <div>
+              <h2 className="text-2xl font-bold text-charcoal mb-4">Hauswirtschaftliche Versorgung</h2>
+              <p className="text-charcoal-light leading-relaxed">
+                Wir übernehmen Ihre hauswirtschaftliche Versorgung! Im Rahmen der hauswirtschaftlichen Versorgung unterstützen wir bei den alltäglichen Aufgaben im Haushalt: Reinigung der Wohnung, Waschen und Bügeln von Kleidung und Wäsche, Erledigung von Einkäufen.
+              </p>
+              <ul className="mt-4 space-y-2">
+                {[
+                  'Reinigung und Pflege der Wohnung',
+                  'Waschen und Bügeln von Kleidung und Wäsche',
+                  'Einkäufe erledigen',
+                  'Kochen und Mahlzeiten zubereiten',
+                  'Müllentsorgung',
+                ].map((item) => (
+                  <li key={item} className="flex gap-2 text-charcoal-light text-sm">
+                    <span className="text-teal font-bold flex-shrink-0">✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Versorgungsverträge info */}
+      <section className="bg-teal-50 border-y border-teal-100 py-12 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-bold text-charcoal mb-4">Alle Pflegekassen</h2>
+          <p className="text-charcoal-light max-w-2xl mx-auto">
+            Wir haben Versorgungsverträge mit allen Pflegekassen und Sozialhilfeträgern. Unsere Leistungen werden vollständig von Ihrer Pflegekasse übernommen — ohne Zusatzkosten für Sie.
+          </p>
         </div>
       </section>
 
       {/* CTA */}
       <section className="bg-teal py-16 px-4 text-white text-center">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4">Haben Sie Fragen zu unseren Leistungen?</h2>
+          <h2 className="text-3xl font-bold mb-4">Wir helfen schnell &amp; unkompliziert!</h2>
           <p className="text-lg opacity-90 mb-8">
-            Wir beraten Sie kostenlos und unverbindlich — telefonisch oder per WhatsApp.
+            Rufen Sie uns an — wir beraten Sie kostenlos und unverbindlich über alle Leistungen und Möglichkeiten.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

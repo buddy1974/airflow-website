@@ -3,7 +3,13 @@
     "allow": [
       "Bash(npm install *)",
       "Bash(npm run *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(vercel --prod --yes)",
+      "Bash(npm show *)",
+      "Bash(git commit *)"
     ]
   }
 }
