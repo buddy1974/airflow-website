@@ -101,6 +101,17 @@ export default function Footer() {
         <div className="mt-10 pt-6 border-t border-gray-700 text-center text-gray-500 text-sm">
           © 2026 Fachpflegedienst airflow GmbH · Alle Rechte vorbehalten · HRB 19337 Amtsgericht Krefeld
         </div>
+        <div className="mt-3 text-center" style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)' }}>
+          Entwickelt von{' '}
+          <a
+            href="https://maxpromo.digital"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'rgba(255,255,255,0.55)', textDecoration: 'underline' }}
+          >
+            maxpromo.digital
+          </a>
+        </div>
       </div>
     </footer>
   )
